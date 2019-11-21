@@ -166,11 +166,11 @@ different window, according to `ag-reuse-window'."
 ;; E.g. we use [1-9][0-9]* rather than [0-9]+ so as to accept ":034:"
 ;; in file names.
 (defvar ag/file-column-pattern-nogroup
-  "^\\(.+?\\):\\([1-9][0-9]*\\):\\([1-9][0-9]*\\):"
+  "^File: \\(.+?\\):\\([1-9][0-9]*\\):\\([1-9][0-9]*\\):"
   "A regexp pattern that groups output into filename, line number and column number.")
 
 (defvar ag/file-column-pattern-group
-  "^\\([[:digit:]]+\\):\\([[:digit:]]+\\):"
+  "^File: \\([[:digit:]]+\\):\\([[:digit:]]+\\):"
   "A regexp pattern to match line number and column number with grouped output.")
 
 (defun ag/compilation-match-grouped-filename ()
